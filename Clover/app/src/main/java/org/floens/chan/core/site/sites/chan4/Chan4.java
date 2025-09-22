@@ -266,7 +266,7 @@ public class Chan4 extends SiteBase {
         @Override
         public HttpUrl archive(Board board) {
             return b.newBuilder()
-                    .addPathSegment(board.code)
+                    .addPathSegment("gif")
                     .addPathSegment("archive")
                     .build();
         }
