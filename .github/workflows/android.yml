@@ -25,10 +25,11 @@ jobs:
       uses: gradle/actions/setup-gradle@v3
 
     - name: Build Debug APK
+      working-directory: Clover
       run: gradle assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: Clover-Debug-APK
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: Clover/app/build/outputs/apk/debug/app-debug.apk
