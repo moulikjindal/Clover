@@ -7,11 +7,11 @@ project.ext.sentryMappingUploadingEnabled = file('sentry.properties').exists()
 buildscript {
     repositories {
         google()
-        mavenCentral()   // 🔄 replaced jcenter() with mavenCentral()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-        classpath 'io.sentry:sentry-android-gradle-plugin:1.7.35'
+        classpath 'com.android.tools.build:gradle:8.3.3' // upgraded
+        classpath 'io.sentry:sentry-android-gradle-plugin:3.37.0' // also upgrade Sentry plugin
     }
 }
 
