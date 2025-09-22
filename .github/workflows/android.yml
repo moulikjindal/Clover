@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:   # <-- lets you run manually from Actions tab
 
 jobs:
   build:
@@ -24,7 +25,7 @@ jobs:
       run: chmod +x ./gradlew
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
